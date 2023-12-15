@@ -47,17 +47,31 @@
             height: auto;
             display: block;
         }
+
+
+         #miadp-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999; /* Ensure the overlay covers the map */
+            opacity: 0.5; /* Adjust the opacity as needed */
+        }
+             
         </style>
 
         <title></title>
     </head>
     <body>
 
-                <div id="logo-container">
-            <img src="images/miadp2.png" alt="Your Logo" id="logo">
+        <div id="logo-container">
+        <img src="images/miadp2.png" alt="Your Logo" id="logo">
         </div>
 
-
+        <div id="miadp-overlay">
+        <img src="images/MIADP.png" alt="MIADP Overlay">
+        </div>
 
         <div id="map">
         </div>
