@@ -12,17 +12,53 @@
         <link rel="stylesheet" href="css/MarkerCluster.Default.css">
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
-        <style>
-        html, body, #map {
+
+         <style>
+        html,
+        body {
             width: 100%;
             height: 100%;
             padding: 0;
             margin: 0;
+            position: relative; /* Make sure the map and logo-container are positioned relative to the body */
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            margin-top: 0px; /* Adjust this value based on the height of your logo */
+            margin-bottom: 0px;
+            z-index: 1; /* Make sure the map is below the logo */
+        }
+
+        #logo-container {
+            position: absolute;
+            bottom: 4%;
+            right: 2%;
+            z-index: 1000; /* Ensure the logo appears above the map */
+            max-width: 7%;
+            max-height: 7%;
+            margin-bottom: 3%;
+            margin-right: 1%;
+        }
+
+        #logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         </style>
+
         <title></title>
     </head>
     <body>
+
+                <div id="logo-container">
+            <img src="images/miadp2.png" alt="Your Logo" id="logo">
+        </div>
+
+
+
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
